@@ -1,0 +1,132 @@
+:root {
+    --primary-color: #9c8f15;
+    --secondary-color: #8c8d34;
+    --background-color: #ffffff;
+    --text-color: #5f512b;
+    --card-background: #ffffff;
+}
+
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1100px; /* 稍微减小最大宽度 */
+    margin: 0 auto;
+    padding: 0 50px; /* 增加左右内边距 */
+}
+
+header {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 40px 50px; /* 增加左右内边距 */
+    margin-bottom: 20px; /* 增加底部外边距 */
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+}
+
+.contact-info p {
+    margin: 5px 0;
+}
+
+main {
+    padding: 40px 0;
+}
+
+.card {
+    background-color: var(--card-background);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: var(--primary-color);
+}
+
+.timeline-item {
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -36px;
+    top: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    border: 2px solid var(--card-background);
+}
+
+h3 {
+    color: var(--secondary-color);
+    margin-bottom: 5px;
+}
+
+.date {
+    font-style: italic;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+ul {
+    padding-left: 20px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin-bottom: 20px;
+    }
+}
